@@ -5,10 +5,8 @@ import sys
 def run():
     print 'Starting Bakefile parser . . .\nPlease enter the name of xml file to read\n(don\'t include .xml in name)'
     file = raw_input('Name of xml file: ')
-    # apps = App.objects.all()
     file = 'scripts/'+file+'.xml'
-    # for app in apps:
-    #     print(app)
+
     print '\n'
     # parse an xml file by name
     try:
