@@ -1,0 +1,12 @@
+<configuration>
+    <modules>
+        <module name="sift-ns3">
+        <source type="mercurial">
+            <attribute name="url" value="https://bitbucket.org/tomhend/sift-ns3"/>
+            <attribute name="module_directory" value="ns-3.29/contrib/sift-ns3"/>
+        </source>
+        <build type="none"> </build>
+        </module>
+    </modules>
+</configuration>
+

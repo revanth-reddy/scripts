@@ -1,0 +1,81 @@
+<configuration>
+<modules>
+<module name="ns3-gym" type="ns-contrib" min_version="ns-3.29">
+<source type="git">
+<attribute name="url" value="https://github.com/tkn-tub/ns3-gym.git"/>
+<attribute name="module_directory" value="opengym"/>
+<attribute name="revision" value="app"/>
+</source>
+<depends_on name="libzmq5" optional="False"/>
+<depends_on name="libzmq5-dev" optional="False"/>
+<depends_on name="libprotobuf-dev" optional="False"/>
+<depends_on name="protobuf-compiler" optional="False"/>
+<depends_on name="python3" optional="False"/>
+<depends_on name="pip3" optional="False"/>
+<depends_on name="ns3gym" optional="False"/>
+<build type="none" objdir="no"> </build>
+</module>
+<module name="ns3gym">
+<source type="system_dependency">
+<attribute name="import_test" value="ns3gym"/>
+<attribute name="try_to_install" value="False"/>
+<attribute name="more_information" value="The Python ns3gym module is not installed, try to install it using 'pip install ./source/ns-3.xx/contrib/opengym/model/ns3gym' Note, that Profobuff messages has to be compiled before using 'protoc -I=./source/ns-3.xx/contrib/opengym/model/ --python_out=./source/ns-3.xx/contrib/opengym/model/ns3gym/ns3gym ./source/ns-3.xx/contrib/opengym/model/messages.proto'."/>
+</source>
+<build type="none" objdir="no"> </build>
+</module>
+<module name="libzmq5">
+<source type="system_dependency">
+<attribute name="dependency_test" value="libzmq.so"/>
+<attribute name="try_to_install" value="False"/>
+<attribute name="name_apt-get" value="libzmq5"/>
+<attribute name="more_information" value="Didn't find: libzmq5 package; please install it."/>
+</source>
+<build type="none" objdir="no"> </build>
+</module>
+<module name="libzmq5-dev">
+<source type="system_dependency">
+<attribute name="dependency_test" value="zmq.h"/>
+<attribute name="try_to_install" value="False"/>
+<attribute name="name_apt-get" value="libzmq5-dev"/>
+<attribute name="more_information" value="Didn't find: libzmq5-dev package; please install it."/>
+</source>
+<build type="none" objdir="no"> </build>
+</module>
+<module name="libprotobuf-dev">
+<source type="system_dependency">
+<attribute name="dependency_test" value="libprotobuf.so"/>
+<attribute name="try_to_install" value="False"/>
+<attribute name="name_apt-get" value="libprotobuf-dev"/>
+<attribute name="more_information" value="Didn't find: libprotobuf-dev package; please install it."/>
+</source>
+<build type="none" objdir="no"> </build>
+</module>
+<module name="protobuf-compiler">
+<source type="system_dependency">
+<attribute name="dependency_test" value="protoc"/>
+<attribute name="try_to_install" value="False"/>
+<attribute name="name_apt-get" value="protobuf-compiler"/>
+<attribute name="more_information" value="Didn't find: protobuf-compiler package; please install it."/>
+</source>
+<build type="none" objdir="no"> </build>
+</module>
+<module name="python3">
+<source type="system_dependency">
+<attribute name="dependency_test" value="python3"/>
+<attribute name="try_to_install" value="False"/>
+<attribute name="name_apt-get" value="python3"/>
+<attribute name="more_information" value="Didn't find python3, download and install it."/>
+</source>
+<build type="none" objdir="no"> </build>
+</module>
+<module name="pip3">
+<source type="system_dependency">
+<attribute name="dependency_test" value="pip3"/>
+<attribute name="try_to_install" value="False"/>
+<attribute name="name_apt-get" value="python3-pip"/>
+<attribute name="more_information" value="Didn't find python3-pip, download and install it."/>
+</source>
+<build type="none" objdir="no"> </build>
+</module>
+</modules>
+</configuration>

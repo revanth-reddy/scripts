@@ -1,0 +1,29 @@
+<configuration>
+<modules>
+ <!--
+ This pybindgen with pre_installation is a workaround for bake bug #2806 
+-->
+<module name="pybindgen-psc-ns3-1.0">
+<source type="git">
+<attribute name="url" value="https://github.com/gjcarneiro/pybindgen.git"/>
+<attribute name="module_directory" value="pybindgen"/>
+<attribute name="revision" value="823d8b2"/>
+</source>
+<build type="python" objdir="yes">
+<attribute name="pre_installation" value="mkdir -p $INSTALLDIR/lib; mkdir -p $INSTALLDIR/include"/>
+</build>
+<depends_on name="python-dev" optional="True"/>
+<depends_on name="setuptools" optional="False"/>
+</module>
+<module name="psc-ns3-1.0.2">
+<source type="archive">
+<attribute name="url" value="https://github.com/usnistgov/psc-ns3/archive/v1.0.2.tar.gz"/>
+<attribute name="extract_directory" value="psc-ns3-1.0.2"/>
+</source>
+<build type="waf" objdir="yes">
+<attribute name="configure_arguments" value="configure --prefix=$INSTALLDIR --enable-examples --enable-tests"/>
+</build>
+<depends_on name="pybindgen-psc-ns3-1.0" optional="True"/>
+</module>
+</modules>
+</configuration>
